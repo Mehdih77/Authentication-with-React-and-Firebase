@@ -38,6 +38,7 @@ function LogIn() {
                 <label htmlFor="password">Password</label>
                 <input type="password" id='password' ref={passwordRef} required />
                 <button disabled={loading} type='submit'>Log in</button>
+                <Link to='/forgot-password'>Forgot Password?</Link>
                 <p>Need an account? <Link to='/signup'>Sign Up</Link></p>
             </form>
     )

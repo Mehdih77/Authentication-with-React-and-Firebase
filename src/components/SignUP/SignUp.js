@@ -47,7 +47,7 @@ function SignUp() {
                 <label htmlFor="confirm-password">Confirm Password</label>
                 <input type="password" id='confirm-password' ref={passwordConfirmRef} required />
                 <button disabled={loading} type='submit'>Sign Up</button>
-                <p>Already have an account? <Link to='/signin'>Sign In</Link></p>
+                <p>Already have an account? <Link to='/login'>Log In</Link></p>
             </form>
     )
 }
