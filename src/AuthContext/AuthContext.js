@@ -16,8 +16,12 @@ function AuthProvider({children}) {
         return auth.createUserWithEmailAndPassword(email,password);
     };
 
-    function signin(email,password){
+    function login(email,password){
         return auth.signInWithEmailAndPassword(email,password);
+    }
+
+    function logout() {
+        return auth.signOut();
     }
 
     useEffect(() => {
@@ -31,8 +35,9 @@ function AuthProvider({children}) {
 
     const value = {
         currentUser,
-        signin,
-        signup
+        login,
+        signup,
+        logout
     };
 
     return (

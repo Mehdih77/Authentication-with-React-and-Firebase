@@ -4,9 +4,9 @@ import {useAuth} from '../../AuthContext/AuthContext';
 import './SignIn.css';
 
 
-function SignIn() {
+function LogIn() {
 
-    const {signin} = useAuth();
+    const {login} = useAuth();
     const emailRef = useRef();
     const passwordRef = useRef();
     const [error, setError] = useState('');
@@ -18,7 +18,7 @@ function SignIn() {
         try {
             setError('');
             setLoading(true);
-            await signin(emailRef.current.value, passwordRef.current.value);
+            await login(emailRef.current.value, passwordRef.current.value);
             history.push('/')
         } catch  {
             setError('Failed to log in');
@@ -43,4 +43,4 @@ function SignIn() {
     )
 }
 
-export default SignIn
+export default LogIn

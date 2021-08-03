@@ -1,8 +1,9 @@
 import './App.css';
 import AuthProvider from './AuthContext/AuthContext';
 import SignUp from './components/SignUP/SignUp';
-import SignIn from './components/SignIn/SignIn';
+import SignIn from './components/LogIn/LogIn';
 import Dashboard from './components/Dashboard/Dashboard'
+import PrivateRoute from './components/PrivateRoute';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,9 +18,9 @@ function App() {
         <Router>
         <AuthProvider>
         <Switch>
-          <Route exact path='/' component={Dashboard} />
+          <PrivateRoute exact path='/' component={Dashboard} />
           <Route path='/signup' component={SignUp} />
-          <Route path='/signin' component={SignIn} />
+          <Route path='/login' component={SignIn} />
         </Switch>
         </AuthProvider>
         </Router>
