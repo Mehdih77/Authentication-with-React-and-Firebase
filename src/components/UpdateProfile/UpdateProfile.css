@@ -1,42 +1,81 @@
-.signup-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid blue;
-    border-radius: 15px;
-    padding: 20px;
+.update-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  background: #181818;
+  box-shadow: 50px 50px 43px #121212, -50px -50px 43px #1e1e1e;
+  color: #fff;
 }
-.signup-form h2{
-    margin-bottom: 0px;
-    margin-top: -5px;
+.update-profile label {
+  padding-left: 20px;
+  font-size: 21px;
 }
-.signup-form label{
-    width: 100%;
-    margin-top: 20px;
+.update-profile input {
+  width: 97%;
+  height: 50px;
+  margin: 15px 0;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border-radius: 45px;
+  background: #181818;
+  box-shadow: inset 22px 22px 43px #121212, inset -22px -22px 43px #1e1e1e;
 }
-.signup-form input{
-    width: 100%;
-    height: 30px;
+.update-profile input::placeholder,
+.update-profile input:enabled {
+  color: rgba(218, 218, 218, 0.65);
+  padding-left: 15px;
+  font-size: 20px;
 }
-.signup-form button{
-    margin-top: 25px;
-    width: 100%;
-    height: 40px;
-    background-color: rgb(51, 51, 182);
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.error-alert{
-    width: 100%;
-    background-color: rgba(255, 55, 55, 0.863);
-    padding: 10px;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
 
+.update-inputs {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.update-profile button {
+  margin-top: 25px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 76, 163);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.update-profile button:hover {
+  background-color: rgb(0, 92, 197);
+}
+.update-profile a {
+  color: rgb(187, 187, 187);
+}
+.update-profile a:hover {
+  color: rgb(138, 138, 138);
+}
+.error-alert {
+  width: 100%;
+  background-color: rgba(255, 55, 55, 0.863);
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+.form-bottom {
+  color: #fff;
+  text-align: center;
+}
+.form-bottom a {
+  color: rgb(0, 76, 163);
+  padding-left: 5px;
+  font-weight: bold;
+}
+.form-bottom a:hover {
+  color: rgb(0, 92, 197);
 }

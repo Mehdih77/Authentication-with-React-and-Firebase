@@ -31,13 +31,17 @@ function ForgotPassword() {
 
     return (
         <>
+                  <div className='forgot-password'>
                   <h2>Reset Password</h2>
                   {error &&  <p className='error-alert'>{error}</p>}
                   {message &&  <p className='message-alert'>{message}</p>}
+                <div className='forgot-password-input'>
                 <label htmlFor="email">Email</label>
-                <input type="text" id='email' ref={emailRef} required />
-                <button onClick={handleForgotPassword} >Reset Password</button>
+                <input autoComplete='off' type="text" id='email' ref={emailRef} required />
+                </div>
+                <button disabled={loading} onClick={handleForgotPassword} >Reset Password</button>
                 <Link to='/login'>Log In</Link>
+                  </div>
                 </>
     )
 }

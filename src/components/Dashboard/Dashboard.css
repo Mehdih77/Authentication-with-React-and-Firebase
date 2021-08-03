@@ -1,34 +1,56 @@
-.dashboard{
-    border: 1px solid blue;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  background: #181818;
+  box-shadow: 50px 50px 43px #121212, -50px -50px 43px #1e1e1e;
+  color: #fff;
 }
-.dashboard h2{
-    margin-bottom: 10px;
-    margin-top: 0px;
+.dashboard h2 {
+  color: rgb(0, 168, 22);
 }
-.dashboard button{
-    margin-top: 25px;
-    width: 100%;
-    height: 40px;
-    background-color: rgb(51, 51, 182);
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    cursor: pointer;
+.dashboard-email {
+  font-size: 25px;
+  color: rgb(146, 146, 146);
 }
-.error-alert{
-    width: 100%;
-    background-color: rgba(255, 55, 55, 0.863);
-    padding: 10px;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-
+.dashboard-email span {
+  color: #fff;
+}
+.dashboard button {
+  margin-top: 25px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 76, 163);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.dashboard button:hover {
+  background-color: rgb(0, 92, 197);
+}
+.dashboard .logout-button {
+  background-color: rgba(255, 72, 72, 0.452);
+}
+.dashboard .logout-button:hover {
+  background-color: rgba(255, 19, 19, 0.452);
+}
+.dashboard a {
+  color: #fff;
+}
+.error-alert {
+  width: 100%;
+  background-color: rgba(255, 55, 55, 0.863);
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
 }

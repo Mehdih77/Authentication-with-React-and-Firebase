@@ -27,9 +27,9 @@ function Dashboard() {
         <div className='dashboard'>
                   <h2>Profile</h2>
                   {error &&  <p className='error-alert'>{error}</p>}
-                <span>Email: {currentUser.email}</span>
-                <Link to='/update-profile'>Update Profile</Link>
-                <button onClick={handleLogOut}>Log Out</button>
+                <p className='dashboard-email'>Email: <span>{currentUser.email}</span></p>
+                <button className='update-button'><Link to='/update-profile'>Update Profile</Link></button>
+                <button className='logout-button' onClick={handleLogOut}>Log Out</button>
                 </div>
                 </>
     )

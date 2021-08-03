@@ -46,17 +46,19 @@ function UpdateProfile() {
 
 
     return (
-            <form onSubmit={handleUpdate} className='signup-form'>
+            <form onSubmit={handleUpdate} className='update-profile' autoComplete='off'>
                   <h2>Update Profile</h2>
                   {error &&  <p className='error-alert'>{error}</p>}
+                <div className='update-inputs'>
                 <label htmlFor="email">Email</label>
                 <input type="text" id='email' ref={emailRef} required defaultValue={currentUser.email} />
                 <label htmlFor="password">Password</label>
-                <input type="password" id='password' ref={passwordRef} placeholder='leave blank to keep the same'  />
+                <input type="password" id='password' ref={passwordRef} placeholder='leave blank to keep the same...'  />
                 <label htmlFor="confirm-password">Confirm Password</label>
-                <input type="password" id='confirm-password' ref={passwordConfirmRef} placeholder='leave blank to keep the same'  />
+                <input type="password" id='confirm-password' ref={passwordConfirmRef} placeholder='leave blank to keep the same...'  />
                 <button disabled={loading} type='submit'>Update</button>
-                <p><Link to='/login'>Cancel</Link></p>
+                </div>
+                <p><Link to='/'>Cancel</Link></p>
             </form>
     )
 }

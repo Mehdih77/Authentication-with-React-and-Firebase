@@ -1,7 +1,7 @@
 import React, { useState, useRef }from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import {useAuth} from '../../AuthContext/AuthContext';
-import './SignUp.css';
+import './SignUp.css'
 
 
 function SignUp() {
@@ -37,9 +37,11 @@ function SignUp() {
 
 
     return (
-            <form onSubmit={handleSubmit} className='signup-form'>
+        <>
+            <form onSubmit={handleSubmit} className="signup-form" autoComplete='off'>
                   <h2>SignUp</h2>
                   {error &&  <p className='error-alert'>{error}</p>}
+                <div className='form-inputs'>
                 <label htmlFor="email">Email</label>
                 <input type="text" id='email' ref={emailRef} required />
                 <label htmlFor="password">Password</label>
@@ -47,8 +49,10 @@ function SignUp() {
                 <label htmlFor="confirm-password">Confirm Password</label>
                 <input type="password" id='confirm-password' ref={passwordConfirmRef} required />
                 <button disabled={loading} type='submit'>Sign Up</button>
-                <p>Already have an account? <Link to='/login'>Log In</Link></p>
+                </div>
             </form>
+                <p className='form-bottom'>Already have an account? <Link to='/login'><a>Log In</a></Link></p>
+                </>
     )
 }
 
