@@ -1,4 +1,5 @@
 import React, { useState, useRef }from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import {useAuth} from '../../AuthContext/AuthContext';
 import './SignUp.css';
 
@@ -11,6 +12,8 @@ function SignUp() {
     const passwordConfirmRef = useRef();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
+
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -23,10 +26,11 @@ function SignUp() {
             setError('');
             setLoading(true);
             await signup(emailRef.current.value, passwordRef.current.value);
+            history.push('/signin')
         } catch  {
             setError('Failed to create account');
         }
-        setLoading(false);
+        setLoading(false)
 
     }
 
@@ -43,7 +47,7 @@ function SignUp() {
                 <label htmlFor="confirm-password">Confirm Password</label>
                 <input type="password" id='confirm-password' ref={passwordConfirmRef} required />
                 <button disabled={loading} type='submit'>Sign Up</button>
-                <p>Already have an account? Log In</p>
+                <p>Already have an account? <Link to='/signin'>Sign In</Link></p>
             </form>
     )
 }
